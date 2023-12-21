@@ -1,0 +1,25 @@
+Design Critique:
+The provider's code is generally well decoupled.
+Although the model implementation isn't provided, the classes that are provided (Hexagon, Disc, View classes)
+are properly encapsulated, with no unnecessary public fields.
+All parts of the MVC are also properly seperated, and the interfaces were flexible and adaptable.
+
+Implementation Critique:
+Their code was generally convenient to use, although adapters were required to be able to use their strategies with our model.
+This was slightly difficult to do as they had a different implementation of Tile that we did (they had Hexagon and Disc to represent each tile).
+Additionally, they also used a different coordinate system from us, as we used axial coordinates whereas they used x/y (rows/columns).
+
+There existed a few methods, such as 'getMaxNumConsecutivePassesAllowed()', which were unnecessary as Reversi rules dictates 2 passes as a default.
+The providers also used Optional<> objects even when they weren't necessary, which made the variables somewhat harder to work with.
+
+Lastly, the providers sometimes used * imports, which slightly affected code readability and reduced our java style score.
+In the JFrameView class, the 'model' and 'gameStatusPanel' fields received the "SingularField" java style error.
+
+Documentation Critique:
+The provider's README was extremely well-made, as it covers all the main components of the code
+and uses rich text format to make it more readable and easy to navigate.
+Methods also contain thoroughly detailed javadocs, making it very easy to understand the codebase.
+
+Design/Code Limitations:
+The providers did not have a human strategy or player to run, and we were not provided with the feature,
+so we would be required to design the feature ourselves if we wanted a human to use their view.

@@ -1,0 +1,8 @@
+We could have implemented easier ways to convert from a PlayerTurn to a FillType, or merged them together into a single class,
+as it was sometimes awkward to have multiple classes referring to similar concepts (Black, White, None).
+We wish we had gotten our JAR to work more consistently on different devices,
+as it worked on our computers but not on the grader's, which directly impeded our grade and feedback received.
+
+Our experience with the providers was very positive, as they quickly replied to our original email,
+and also re-sent the codebase when they realized that they had forgotten to share some implementation details.
+Their second email also included what changes they had made for us, which made it very simple for us.
